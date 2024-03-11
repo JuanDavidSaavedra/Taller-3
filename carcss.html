@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de autos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <body >
+        <input type="button" onclick="location.href='./Lista.html'" value="Volver a Lista" class="btn">
+        <input type="button" onclick="location.href='./integrantes.html'" value="Volver a Integrantes" class="btn">
+        <form>
+        <div class="container">
+            <h1 class="mt-5">Formulario de Coche</h1>
+            <table class="table table-bordered mt-4">
+                <thead>
+                    <tr>
+                        <th colspan="2" class="text-center">chc_coche</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id_coche: INTEGER (11)</td>
+                        <td><input type="number" class="form-control" maxlength="11"></td>
+                    </tr>
+                    <tr>
+                        <td>id_movidoa: INTEGER (3) (FK)</td>
+                        <td>
+                            <select class="form-select">
+                                <option value="1">Gasolina</option>
+                            <option value="2">Diésel</option>
+                            <option value="3">Gas natural</option>
+                            <option value="4">Gas licuado de petróleo (GLP)</option>
+                            <option value="5">Gas natural comprimido (GNC)</option>
+                            <option value="6">Gas natural licuado (GNL)</option>
+                            <option value="7">Etanol</option>
+                            <option value="8">Hidrógeno</option>
+                            <option value="9">Eléctrico</option>
+                            <option value="10">Biodiésel</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>id_tipocoche: INTEGER (3) (FK)</td>
+                        <td>
+                            <select class="form-select">
+                                <option value="1">Sedán</option>
+                            <option value="2">SUV</option>
+                            <option value="3">Hatchback</option>
+                            <option value="4">Coupé</option>
+                            <option value="5">Convertible</option>
+                            <option value="6">Minivan</option>
+                            <option value="7">Pickup</option>
+                            <option value="8">Camioneta</option>
+                            <option value="9">Furgoneta</option>
+                            <option value="10">Deportivo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>id_estado: INTEGER (3) (FK)</td>
+                        <td>
+                            <select class="form-select">
+                                <option value="1">Nuevo</option>
+                            <option value="2">Usado</option>
+                            <option value="3">Reacondicionado</option>
+                            <option value="4">En proceso de reparación</option>
+                            <option value="5">Vendido</option>
+                            <option value="6">Devuelto</option>
+                            <option value="7">En tránsito</option>
+                            <option value="8">En exhibición</option>
+                            <option value="9">Reservado</option>
+                            <option value="10">Descontinuado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>id_marca: INTEGER (3) (FK)</td>
+                        <td>
+                            <select class="form-select">
+                                <option value="1">Toyota</option>
+                            <option value="2">Ford</option>
+                            <option value="3">Honda</option>
+                            <option value="4">Chevrolet</option>
+                            <option value="5">Volkswagen</option>
+                            <option value="6">Nissan</option>
+                            <option value="7">BMW</option>
+                            <option value="8">Mercedes-Benz</option>
+                            <option value="9">Audi</option>
+                            <option value="10">Hyundai</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>id_user: INTEGER (3) (FK)</td>
+                        <td><input type="number" class="form-control" maxlength="11"></td>
+                    </tr>
+                    <tr>
+                        <td>modelo: VARCHAR (60)</td>
+                        <td><input type="text" class="form-control" maxlength="60"></td>
+                    </tr>
+                    <tr>
+                        <td>año: VARCHAR (4)</td>
+                        <td><input type="text" class="form-control" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td>detalle: TEXT</td>
+                        <td><textarea class="form-control" rows="3" maxlength="85"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>caja: INTEGER</td>
+                        <td><input type="number" class="form-control" maxlength="255"></td>
+                    </tr>
+                    <tr>
+                        <td>motor: FLOAT (2.2)</td>
+                        <td><input type="number" class="form-control" step="0.01" maxlength="255"></td>
+                    </tr>
+                    <tr>
+                        <td>fechapub: VARCHAR (10)</td>
+                        <td><input type="text" class="form-control" maxlength="10"></td>
+                    </tr>
+                    <tr>
+                        <td>precio: FLOAT (6.2)</td>
+                        <td><input type="number" class="form-control" step="0.01" maxlength="255"></td>
+                    </tr>
+                    <tr>
+                        <td>moneda: VARCHAR (3)</td>
+                        <td>
+                            <select class="form-select">
+                                <option value="USD">USD - Dólar estadounidense</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="GBP">GBP - Libra esterlina</option>
+        <option value="JPY">JPY - Yen japonés</option>
+        <option value="CAD">CAD - Dólar canadiense</option>
+        <option value="AUD">AUD - Dólar australiano</option>
+        <option value="CHF">CHF - Franco suizo</option>
+        <option value="CNY">CNY - Yuan chino</option>
+        <option value="SEK">SEK - Corona sueca</option>
+        <option value="NZD">NZD - Dólar neozelandés</option>
+        <option value="ARS">ARS - Peso argentino</option>
+        <option value="BRL">BRL - Real brasileño</option>
+        <option value="COP">COP - Peso colombiano</option>
+        <option value="CLP">CLP - Peso chileno</option>
+        <option value="MXN">MXN - Peso mexicano</option>
+        <option value="PEN">PEN - Sol peruano</option>
+        <option value="UYU">UYU - Peso uruguayo</option>
+        <option value="CUP">CUP - Peso cubano</option>
+        <option value="DOP">DOP - Peso dominicano</option>
+        <option value="HTG">HTG - Gourde haitiano</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>cc_pic01: VARCHAR (85)</td>
+                        <td><input type="text" class="form-control" maxlength="85"></td>
+                    </tr>
+                    <tr>
+                        <td>cc_pic02: VARCHAR (85)</td>
+                        <td><input type="text" class="form-control" maxlength="85"></td>
+                    </tr>
+                    <tr>
+                        <td>cc_pic03: VARCHAR (85)</td>
+                        <td><input type="text" class="form-control" maxlength="85"></td>
+                    </tr>
+                    <tr>
+                        <td>cc_destac: VARCHAR (2)</td>
+                        <td><input type="text" class="form-control" maxlength="2"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="text-center">chc_coche_FKIndex1<br>id_user</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="text-center">chc_coche_FKIndex2<br>id_marca</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="text-center">chc_coche_FKIndex5<br>id_tipocoche</th>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" name="enviar" value="Registrar" class="input-group mb-3"/>
+            <input type="reset" name="Reset" value="Borrar los datos introducidos" class="input-group mb-3"/>
+            <br>
+        </div>
+        <br>
+        <br>
+    </form>
+
+</body>
+</html>
