@@ -65,11 +65,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #97b2cf;
+    background-color: #3295ff;
 }
 
 input[type="button"] {
-    background-color: #afd3f8;
+    background-color: #71b4f6;
     color: #f5ebeb;
     cursor: pointer;
 }
@@ -89,7 +89,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #ccc;
+    background-color: #2e8df9;
 }
 
 .container {

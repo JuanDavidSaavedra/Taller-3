@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coche con CSS</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coche con Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-    
-    <body >
-        <input type="button" onclick="location.href='./Lista.html'" value="Volver a Lista" class="btn">
-        <input type="button" onclick="location.href='./integrantes.html'" value="Volver a Integrantes" class="btn">
-        <form>
+<body class="has-background-light">
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <input type="button" onclick="location.href='./Lista.html'" value="Volver a Lista" class="button is-info">
+          </div>
+          <div class="column">
+            <input type="button" onclick="location.href='./integrantes.html'" value="Volver a Integrantes" class="button is-info">
+          </div>
+        </div>
+    <form>
         <div class="container">
-            <h1>Registro de Coche</h1>
-        <p>Por favor, complete el formulario a continuación:</p>
-            <table class="table table-bordered mt-4">
+            <h1 class="title is-1 has-text-centered">Registro de Coche</h1>
+            <p class="subtitle has-text-centered">Por favor, complete el formulario a continuación:</p>
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                        <th colspan="2" style="text-align: center;">chc_coche</th>
+                        <th colspan="2" class="has-text-centered">chc_coche</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>id_coche: INTEGER (11)</td>
-                        <td><input type="number" class="form-control" maxlength="11"></td>
+                        <td><input type="number" class="input" maxlength="11"></td>
                     </tr>
                     <tr>
                         <td>id_movidoa: INTEGER (3) (FK)</td>
                         <td>
+                            <div class="select is-fullwidth">
                             <select class="form-select">
                                 <option value="1">Gasolina</option>
                             <option value="2">Diésel</option>
@@ -40,11 +48,13 @@
                             <option value="9">Eléctrico</option>
                             <option value="10">Biodiésel</option>
                             </select>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>id_tipocoche: INTEGER (3) (FK)</td>
                         <td>
+                            <div class="select is-fullwidth">
                             <select class="form-select">
                                 <option value="1">Sedán</option>
                             <option value="2">SUV</option>
@@ -57,11 +67,13 @@
                             <option value="9">Furgoneta</option>
                             <option value="10">Deportivo</option>
                             </select>
+                        </div>
                         </td>
                     </tr>
                     <tr>
                         <td>id_estado: INTEGER (3) (FK)</td>
                         <td>
+                            <div class="select is-fullwidth">
                             <select class="form-select">
                                 <option value="1">Nuevo</option>
                             <option value="2">Usado</option>
@@ -74,11 +86,13 @@
                             <option value="9">Reservado</option>
                             <option value="10">Descontinuado</option>
                             </select>
+                        </div>
                         </td>
                     </tr>
                     <tr>
                         <td>id_marca: INTEGER (3) (FK)</td>
                         <td>
+                            <div class="select is-fullwidth">
                             <select class="form-select">
                                 <option value="1">Toyota</option>
                             <option value="2">Ford</option>
@@ -91,43 +105,45 @@
                             <option value="9">Audi</option>
                             <option value="10">Hyundai</option>
                             </select>
+                        </div>
                         </td>
                     </tr>
                     <tr>
                         <td>id_user: INTEGER (3) (FK)</td>
-                        <td><input type="number" class="form-control" maxlength="11"></td>
+                        <td><input type="number" class="input" maxlength="11"></td>
                     </tr>
                     <tr>
                         <td>modelo: VARCHAR (60)</td>
-                        <td><input type="text" class="form-control" maxlength="60"></td>
+                        <td><input type="text" class="input" maxlength="60"></td>
                     </tr>
                     <tr>
                         <td>año: VARCHAR (4)</td>
-                        <td><input type="text" class="form-control" maxlength="4"></td>
+                        <td><input type="text" class="input" maxlength="4"></td>
                     </tr>
                     <tr>
                         <td>detalle: TEXT</td>
-                        <td><textarea class="form-control" rows="3" maxlength="85"></textarea></td>
+                        <td><textarea class="input" rows="3" maxlength="85"></textarea></td>
                     </tr>
                     <tr>
                         <td>caja: INTEGER</td>
-                        <td><input type="number" class="form-control" maxlength="255"></td>
+                        <td><input type="number" class="input" maxlength="255"></td>
                     </tr>
                     <tr>
                         <td>motor: FLOAT (2.2)</td>
-                        <td><input type="number" class="form-control" step="0.01" maxlength="255"></td>
+                        <td><input type="number" class="input" step="0.01" maxlength="255"></td>
                     </tr>
                     <tr>
                         <td>fechapub: VARCHAR (10)</td>
-                        <td><input type="text" class="form-control" maxlength="10"></td>
+                        <td><input type="text" class="input" maxlength="10"></td>
                     </tr>
                     <tr>
                         <td>precio: FLOAT (6.2)</td>
-                        <td><input type="number" class="form-control" step="0.01" maxlength="255"></td>
+                        <td><input type="number" class="input" step="0.01" maxlength="255"></td>
                     </tr>
                     <tr>
                         <td>moneda: VARCHAR (3)</td>
                         <td>
+                            <div class="select is-fullwidth">
                             <select class="form-select">
                                 <option value="USD">USD - Dólar estadounidense</option>
         <option value="EUR">EUR - Euro</option>
@@ -150,42 +166,43 @@
         <option value="DOP">DOP - Peso dominicano</option>
         <option value="HTG">HTG - Gourde haitiano</option>
                             </select>
+                        </div>
                         </td>
                     </tr>
                     <tr>
                         <td>cc_pic01: VARCHAR (85)</td>
-                        <td><input type="text" class="form-control" maxlength="85"></td>
+                        <td><input type="text" class="input" maxlength="85"></td>
                     </tr>
                     <tr>
                         <td>cc_pic02: VARCHAR (85)</td>
-                        <td><input type="text" class="form-control" maxlength="85"></td>
+                        <td><input type="text" class="input"  maxlength="85"></td>
                     </tr>
                     <tr>
                         <td>cc_pic03: VARCHAR (85)</td>
-                        <td><input type="text" class="form-control" maxlength="85"></td>
+                        <td><input type="text" class="input"  maxlength="85"></td>
                     </tr>
                     <tr>
                         <td>cc_destac: VARCHAR (2)</td>
-                        <td><input type="text" class="form-control" maxlength="2"></td>
+                        <td><input type="text" class="input"  maxlength="2"></td>
                     </tr>
                     <tr>
-                        <th colspan="2" style="text-align: center;">chc_coche_FKIndex1<br>id_user</th>
+                        <th colspan="2" class="has-text-centered">chc_coche_FKIndex1<br>id_user</th>
                     </tr>
                     <tr>
-                        <th colspan="2" style="text-align: center;" >chc_coche_FKIndex2<br>id_marca</th>
+                        <th colspan="2" class="has-text-centered">chc_coche_FKIndex2<br>id_marca</th>
                     </tr>
                     <tr>
-                        <th colspan="2" style="text-align: center;">chc_coche_FKIndex5<br>id_tipocoche</th>
+                        <th colspan="2" class="has-text-centered">chc_coche_FKIndex5<br>id_tipocoche</th>
                     </tr>
                 </tbody>
             </table>
-            <input type="submit" name="enviar" value="Registrar" class="input-group mb-3"/>
-            <input type="reset" name="Reset" value="Borrar los datos introducidos" class="input-group mb-3"/>
-            <br>
+            <div class="buttons is-centered">
+                <input type="submit" name="enviar" value="Registrar" class="button is-primary">
+                <input type="reset" name="Reset" value="Borrar los datos introducidos" class="button is-danger">
+              </div>
         </div>
-        <br>
-        <br>
+    </div>
     </form>
-
+    </section>
 </body>
 </html>

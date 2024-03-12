@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario con CSS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usuario con Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-
-<body>
-    <input type="button" onclick="location.href='./Lista.html'" value="Volver a Lista" class="btn">
-        <input type="button" onclick="location.href='./integrantes.html'" value="Volver a Integrantes" class="btn">
-        <form>
-    <div class="container">   
-        <h1>Registro de usuarios</h1>
-        <p>Por favor, regístrese completando el formulario a continuación:</p>
-        <table>
-            <tr><td colspan="2" style="text-align: center;">chc_usuarios</td></tr>
-            <tr>
-                <td>id_usr: INTEGER (11)</td>
-                <td><input type="number" maxlength="11"></td>
-            </tr>
-            <tr>
-                <td>id_pais_: INTEGER (3) (FK)</td>
-                <td>
-                    <select>
-                        <option value="004">004 - Afganistán</option>
-        <option value="008">008 - Albania</option>
+<body class="has-background-light">
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <input type="button" onclick="location.href='./Lista.html'" value="Volver a Lista" class="button is-info">
+        </div>
+        <div class="column">
+          <input type="button" onclick="location.href='./integrantes.html'" value="Volver a Integrantes" class="button is-info">
+        </div>
+      </div>
+      <form>
+      <h1 class="title is-1 has-text-centered">Registro de usuarios</h1>
+      <p class="subtitle has-text-centered">Por favor, regístrese completando el formulario a continuación:</p>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th colspan="2" class="has-text-centered">chc_usuarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>id_usr: INTEGER (11)</td>
+            <td><input type="number" class="input" maxlength="11"></td>
+          </tr>
+          <tr>
+            <td>id_pais_: INTEGER (3) (FK)</td>
+            <td>
+              <div class="select is-fullwidth">
+                <select>
+                  <option value="004">004 - Afganistán</option>
+                  <option value="008">008 - Albania</option>
         <option value="012">012 - Argelia</option>
         <option value="024">024 - Angola</option>
         <option value="032">032 - Argentina</option>
@@ -262,41 +274,46 @@
         <option value="882">882 - Samoa</option>
         <option value="887">887 - Yemen</option>
         <option value="894">894 - Zambia</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>nombre: VARCHAR (25)</td>
-                <td><input type="text" maxlength="25"></td>
-            </tr>
-            <tr>
-                <td>apellido: VARCHAR (25)</td>
-                <td><input type="text" maxlength="25"></td>
-            </tr>
-            <tr>
-                <td>dirección: VARCHAR (45)</td>
-                <td><input type="text" maxlength="45"></td>
-            </tr>
-            <tr>
-                <td>ccusuario: VARCHAR (20)</td>
-                <td><input type="text" maxlength="20"></td>
-            </tr>
-            <tr>
-                <td>ccpaswd: TEXT</td>
-                <td><input type="password"></td>
-            </tr>
-            <tr>
-                <td>email: VARCHAR (120)</td>
-                <td><input type="email" maxlength="120"></td>
-            </tr>
-            <tr>
-                <td>teléfono: VARCHAR (20)</td>
-                <td><input type="text" maxlength="20"></td>
-            </tr>
-        </table>
-        <input type="submit" name="enviar" value="Registrar" />
-        <input type="reset" name="Reset" value="Borrar los datos introducidos" class="input-group mb-3"/>
-    </div>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>nombre: VARCHAR (25)</td>
+            <td><input type="text" class="input" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td>apellido: VARCHAR (25)</td>
+            <td><input type="text" class="input" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td>dirección: VARCHAR (45)</td>
+            <td><input type="text" class="input" maxlength="45"></td>
+          </tr>
+          <tr>
+            <td>ccusuario: VARCHAR (20)</td>
+            <td><input type="text" class="input" maxlength="20"></td>
+          </tr>
+          <tr>
+            <td>ccpaswd: TEXT</td>
+            <td><input type="password" class="input"></td>
+          </tr>
+          <tr>
+            <td>email: VARCHAR (120)</td>
+            <td><input type="email" class="input" maxlength="120"></td>
+          </tr>
+          <tr>
+            <td>teléfono: VARCHAR (20)</td>
+            <td><input type="tel" class="input" maxlength="20"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="buttons is-centered">
+        <input type="submit" name="enviar" value="Registrar" class="button is-primary">
+        <input type="reset" name="Reset" value="Borrar los datos introducidos" class="button is-danger">
+      </div>
+    </div>
 </form>
+  </section>
 </body>
 </html>
